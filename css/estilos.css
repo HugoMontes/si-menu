@@ -28,9 +28,11 @@ header #button-menu{
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100%;
+	width: 0%;
 	height: 100vh; /* Ocupa toda la pantalla */
 	background: rgba(0,0,0,.3);
+
+	/*transition: background 0.2s;*/ /* Efecto de transicion de 2 segundos */
 }
 
 .navegacion ul{
@@ -41,6 +43,9 @@ header #button-menu{
 
 	position: absolute;
 	top: 0;
+	left: -320px;
+
+	transition: left .3s; /* Efecto de transicion de 3 segundos */
 }
 
 .navegacion .menu li.title-menu{
@@ -59,6 +64,11 @@ header #button-menu{
 	font-weight: 200;
 	text-decoration: none;
 	color: #575D69;
+}
+
+.navegacion .menu a:hover{
+	background: #798DA3;
+	color: #fff;
 }
 
 .navegacion .menu li span.icon-menu{
@@ -102,4 +112,9 @@ header #button-menu{
 	content: '\f0d9';
 
 	margin-right: 10px;
+}
+@media screen and (max-width: 320px){
+	.navegacion ul{
+		width: 100%;
+	}
 }
